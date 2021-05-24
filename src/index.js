@@ -17,7 +17,13 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "Done";
   completeButton.addEventListener("click", () => {
-    alert("Complete!");
+    const completeTarget = completeButton.parentNode;
+    document.getElementById("complete-area").appendChild(completeTarget);
+    const backButton = document.createElement("button");
+    backButton.innerText = "Back";
+    div.appendChild(backButton);
+    div.removeChild(completeButton);
+    div.removeChild(deleteButton);
   });
 
   //Add delete button
