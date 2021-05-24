@@ -19,6 +19,7 @@ const onClickAdd = () => {
   completeButton.addEventListener("click", () => {
     const completeTarget = completeButton.parentNode;
     document.getElementById("complete-area").appendChild(completeTarget);
+
     //backButton作成
     const backButton = document.createElement("button");
     backButton.innerText = "Back";
@@ -31,7 +32,7 @@ const onClickAdd = () => {
       div.appendChild(deleteButton);
     });
 
-    //
+    //completeされた際にボタンを切り替える
     div.appendChild(backButton);
     div.removeChild(completeButton);
     div.removeChild(deleteButton);
