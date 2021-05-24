@@ -16,11 +16,16 @@ const onClickAdd = () => {
   //Add complete button
   const completeButton = document.createElement("button");
   completeButton.innerText = "Done";
+  completeButton.addEventListener("click", () => {
+    alert("Complete!");
+  });
 
   //Add delete button
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "Delete";
-
+  deleteButton.addEventListener("click", () => {
+    alert("Delete");
+  });
   //Add child elements into div
   div.appendChild(li);
   div.appendChild(completeButton);
