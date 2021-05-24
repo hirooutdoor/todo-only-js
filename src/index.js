@@ -19,8 +19,19 @@ const onClickAdd = () => {
   completeButton.addEventListener("click", () => {
     const completeTarget = completeButton.parentNode;
     document.getElementById("complete-area").appendChild(completeTarget);
+    //backButton作成
     const backButton = document.createElement("button");
     backButton.innerText = "Back";
+    backButton.addEventListener("click", () => {
+      //backボタンを押下した際にDoneリストから削除
+      const backTarget = backButton.parentNode;
+      document.getElementById("inProgress-list").appendChild(backTarget);
+      div.removeChild(backButton);
+      div.appendChild(completeButton);
+      div.appendChild(deleteButton);
+    });
+
+    //
     div.appendChild(backButton);
     div.removeChild(completeButton);
     div.removeChild(deleteButton);
