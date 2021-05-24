@@ -23,9 +23,12 @@ const onClickAdd = () => {
   //Add delete button
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "Delete";
+  //delete parent tag(div) from the list
   deleteButton.addEventListener("click", () => {
-    alert("Delete");
+    const deleteTarget = deleteButton.parentNode;
+    document.getElementById("inProgress-list").removeChild(deleteTarget);
   });
+
   //Add child elements into div
   div.appendChild(li);
   div.appendChild(completeButton);
