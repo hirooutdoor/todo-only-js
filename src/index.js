@@ -8,7 +8,11 @@ const onClickAdd = () => {
   //create div
   const div = document.createElement("div");
   div.className = "list-row";
-  console.log(div);
+
+  //liタグ生成
+  const li = document.createElement("li");
+  li.innerText = inputText;
+  console.log(li);
 };
 
 document
