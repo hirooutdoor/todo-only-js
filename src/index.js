@@ -9,13 +9,25 @@ const onClickAdd = () => {
   const div = document.createElement("div");
   div.className = "list-row";
 
-  //liタグ生成
+  //Create li
   const li = document.createElement("li");
   li.innerText = inputText;
 
-  //divタグの子要素に各要素を設定
+  //Add complete button
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "Done";
+
+  //Add delete button
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "Delete";
+
+  //Add child elements into div
   div.appendChild(li);
-  console.log(div);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
+
+  //Add div into inProgress-list(ul)
+  document.getElementById("inProgress-list").appendChild(div);
 };
 
 document
